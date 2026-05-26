@@ -1,6 +1,6 @@
 # second-brain
 
-This repository contains my implementation of second-brain concepts, built into a graph-native knowledge system for Obsidian and operated with Claude Code.
+This repository contains my implementation of second-brain concepts built into a graph-native knowledge system for Obsidian, operated with Claude Code. Read more about my exploration for this system in my ([blog post](https://stephanierebecca.com/posts/second-brain/)). 
 
 This is my personal workflow, heavily influenced by my friend Robert Martin's detailed system ([MolecularNotes](https://github.com/robertmartin8/MolecularNotes)). Since this is a personal implementation, not a generic template, anyone forking it should understand they're adapting rather than copying wholesale. Robert's MolecularNotes is the direct structural inspiration, folder naming, and scripts approach implemented here. I have simply added a layer of Claude Code functionality, and some small structural additions to suit my own work-style. This system also heavily references Niklas Luhmann's Zettelkasten methodology ([zettelkasten.de](https://zettelkasten.de/introduction/)) as the underlying intellectual framework.
 
