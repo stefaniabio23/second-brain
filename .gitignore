@@ -1,0 +1,15 @@
+# macOS
+.DS_Store
+
+# Obsidian local config
+.obsidian/
+
+# Claude local operating layer
+.claude/
+
+# Generated — rebuild with: python3 _system/embed.py --build
+_system/embeddings.json
+
+# Logs / temporary files
+*.log
+*.tmp
