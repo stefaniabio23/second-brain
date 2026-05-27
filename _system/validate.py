@@ -211,7 +211,7 @@ def validate_note(
 
     # 6. No uppercase tags
     for tag in tags:
-        if tag != tag.lower() and tag not in {"AI"}:  # AI is allowed uppercase
+        if tag != tag.lower():
             warn(f"Tag '{tag}' should be lowercase (or add to allowlist in validate.py)")
 
     # 7. derived-from links resolve

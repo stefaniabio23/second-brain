@@ -109,7 +109,8 @@ Every skill that writes prose to the vault runs `/stop-slop` and `/writing-voice
 
 ## Graph rules
 
-- Colour nodes by `type:` for structure, by `tag:` for topic
+- Use folder path groups for note type (`path:atoms/`, `path:molecules/`, `path:sources/`, `path:compounds/`, `path:MOCs/`). Native Obsidian graph groups work with `path:` and `tags:`, not arbitrary frontmatter fields.
+- Use tags for topic overlays.
 - No generated entity nodes. Author nodes and MOCs are the only hubs, and both require deliberate creation.
 - `_templates/`, `_system/`, `.claude/` excluded from graph via Obsidian settings
 

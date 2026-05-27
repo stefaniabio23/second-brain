@@ -12,7 +12,7 @@ All tags used in the vault must appear here before use. New tags go in the Draft
 - `philosophy`
 - `psychology`
 - `physics`
-- `AI`
+- `ai`
 - `health`
 - `startups`
 - `behaviour`
