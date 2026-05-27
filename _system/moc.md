@@ -16,8 +16,9 @@ Create or update a MOC (Map of Content) for a topic. A MOC is a semi-structured 
    - Body wikilinks in topic-adjacent notes that point to unlisted notes
 3. Group findings into: Sources, Atoms, Molecules, Compounds.
 4. Draft a short summary (2-3 sentences) explaining what this MOC covers and why it exists as a map.
-5. Read `_templates/moc.md`.
-6. Show the full draft. Ask: `Write to MOCs/[topic]-moc.md? (y/n/edit)`
+5. Run `/stop-slop` and `/writing-voice` on the summary prose. If either is not installed: `[skill] not found. Proceed without the check? (y/n)` — continue only on confirmation.
+6. Read `_templates/moc.md`.
+7. Show the full draft. Ask: `Write to MOCs/[topic]-moc.md? (y/n/edit)`
 7. Flag any groupings that feel uncertain: "I put [[note]] under Atoms but it could be a Molecule. Check this."
 
 ## Updating an existing MOC

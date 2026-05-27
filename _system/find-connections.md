@@ -42,7 +42,7 @@ Confidence: 0.81
 Add to body? (y/n)
 ```
 
-6. On approval: write a prose sentence in the body of the current note explaining why the link matters, with `[[wikilink]]` embedded naturally in the sentence.
+6. On approval: draft a prose sentence in the body of the current note explaining why the link matters, with `[[wikilink]]` embedded naturally in the sentence. Run `/stop-slop` on the sentence before writing. If not installed: `[skill] not found. Proceed without the check? (y/n)`
 
 ## Steps (vault-wide)
 

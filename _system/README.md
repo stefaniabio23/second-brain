@@ -38,6 +38,18 @@ Run skills in Claude Code from the vault root (`cd second-brain && claude`).
 | `/moc` | Create or update a Map of Content for a topic. |
 | `/maintain` | Vault-wide health pass: frontmatter audit, orphan detection, relink opportunities, tag drift, bottlenecks. Nothing written without approval. |
 
+## External skills
+
+Three skills used by this system are installed globally in Claude Code, not bundled here:
+
+| Skill | Role |
+|---|---|
+| `/stop-slop` | Mechanical quality checks before any prose is written to disk. |
+| `/writing-voice` | Voice calibration for prose output. Calls `/stop-slop` internally. |
+| `/book-notes` | Chapter-level book extraction. Output lands in `book-notes/`. |
+
+Without these, skills will flag the missing dependency and ask whether to proceed. The vault functions without them; prose quality checking is disabled.
+
 ## Obsidian setup
 
 1. Open `second-brain/` as your vault in Obsidian.

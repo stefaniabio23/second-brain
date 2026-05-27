@@ -8,7 +8,8 @@ Ingest a substantive source (article, paper, podcast transcript, essay) into a s
 2. Identify: title, author, source-type, relevant tags.
 3. Read `_templates/source-note.md`.
 4. Generate the source-note: populate frontmatter, write `## Short summary` (2-3 sentences), populate `## Key concepts` with the most important concepts from the source and any natural body wikilinks to existing atoms.
-5. Show the full draft. Ask: `Write to sources/[filename].md? (y/n/edit)`
+5. Run `/stop-slop` and `/writing-voice` on all prose in the draft. If either is not installed: `[skill] not found. Proceed without the check? (y/n)` — continue only on confirmation.
+6. Show the full draft. Ask: `Write to sources/[filename].md? (y/n/edit)`
 7. On approval, write.
 8. After writing, offer to mine atom candidates: scan the Key concepts section for concepts that would have a Wikipedia page and are not already in `atoms/`. Surface up to 5.
 9. Propose each candidate one at a time: `Atom candidate: "[claim-shaped title]". Save? (y/n/edit/skip)`. Wait for response before showing the next.

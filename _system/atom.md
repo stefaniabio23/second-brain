@@ -9,7 +9,8 @@ Write one atom. An atom is a single concept that is self-contained and would pla
 3. Read `_templates/atom.md`.
 4. Draft the atom body: 50-250 words, one concept only. Use plain language. No academic compound nouns where a common word fits.
 5. Set `derived-from:` to the source note. If source does not exist in `sources/`, flag: "Source note not found. Create it first with /capture, or specify the path."
-6. Show full draft. Ask: `Write to atoms/[filename].md? (y/n/edit)`
+6. Run `/stop-slop` and `/writing-voice` on the draft body. If either is not installed: `[skill] not found. Proceed without the check? (y/n)` — continue only on confirmation.
+7. Show full draft. Ask: `Write to atoms/[filename].md? (y/n/edit)`
 8. On approval, write.
 9. After writing, scan `atoms/` for existing notes that should be linked from the body. If found, propose as body wikilinks one at a time. Do not write without approval.
 

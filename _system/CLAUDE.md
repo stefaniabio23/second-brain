@@ -69,13 +69,14 @@ Optional fields for source-note: `author`, `source-file`, `url`. Use only what e
 
 ### Filename conventions
 
-All files: kebab-case, no spaces, no capitals. Never include a date unless the date is the content.
+All files: kebab-case, no spaces, no capitals. Papers and books include a year prefix; atoms and molecules do not.
 
 | Type | Convention | Example |
 |---|---|---|
-| source-note (book) | `book-title-firstname-lastname.md` | `memories-dreams-reflections-carl-jung.md` |
-| source-note (paper) | `year-title-slug.md` | `2011-hallmarks-of-cancer.md` |
-| source-note (podcast) | `podcast-name-episode-slug.md` | `invest-like-the-best-howard-marks.md` |
+| source-note (book) | `YYYY-firstname-lastname-book-title.md` | `1962-carl-jung-memories-dreams-reflections.md` |
+| source-note (paper) | `YYYY-title-slug.md` | `2011-hallmarks-of-cancer.md` |
+| source-note (podcast) | `YYYY-podcast-name-episode-slug.md` | `2023-invest-like-the-best-howard-marks.md` |
+| source-note (university-module) | `YYYY-name-of-module.md` | `2021-molecular-basis-of-disease.md` |
 | book-note | `book-slug-chapter-n-chapter-name.md` | `atlas-shrugged-chapter-1-theme.md` |
 | atom | `concept-slug.md` | `knudson-two-hit-hypothesis.md` |
 | molecule | `insight-slug.md` | `senescence-as-checkpoint-not-endpoint.md` |
@@ -83,15 +84,28 @@ All files: kebab-case, no spaces, no capitals. Never include a date unless the d
 | moc | `topic-moc.md` | `cancer-biology-moc.md` |
 | author | `firstname-lastname.md` | `carl-jung.md` |
 
+### H1 title convention
+
+Source-note H1: `Author Name Title` — author first, no separator, no em dash. For multi-author papers: primary author et al. For ancient texts: conventional author name first.
+
 ## Body conventions
 
 - Frontmatter = routing, lineage, filtering only
 - Body = meaning, connections, contradictions
-- Connections: write `[[wikilink]]` in body prose where the relationship is relevant. `/find-connections` adds explanatory prose alongside approved links.
+- Connections use both placements:
+  1. **Inline in prose** — embed `[[wikilink]]` inside the Implication or Evidence paragraph where the mechanism is being explained. The link lives inside a sentence that says *why* the two notes relate.
+  2. **`Related:` section** — a dedicated block at the end of the body, one bullet per connection. Each bullet is a full sentence naming the mechanism with the wikilink embedded. Example: "DNA methylation at CpG islands can epigenetically silence a tumour suppressor's promoter, acting as an alternative second hit in [[knudson-two-hit-hypothesis]] alongside mutation and deletion."
+  A bare `[[wikilink]]` with no explanatory sentence is not a valid connection in either location. `/find-connections` surfaces candidates and drafts both placements before writing.
 - Contradictions: write `contradicts [[wikilink]]` as a plain body annotation. `/find-contradictions` writes this on approval only.
 - No `related:` or `contradicts:` in frontmatter. Body wikilinks handle both.
 - `[[wikilinks]]` are for note links only. Never use brackets for anything else in the body.
 - Tags come from `_system/tags.md`. New tags go there first.
+
+## Pre-write rule
+
+Every skill that writes prose to the vault runs `/stop-slop` and `/writing-voice` on the draft before writing to disk. These are external skills installed globally at `~/.claude/skills/`. If either is not installed, the skill flags it and asks whether to proceed without the check.
+
+`/writing-voice` is the primary call — it handles voice calibration and calls `/stop-slop` internally for mechanical checks. Run both explicitly until you confirm the chain is wired in your installation.
 
 ## Graph rules
 
@@ -112,4 +126,12 @@ Skills live in `_system/`. Run them by name in Claude Code.
 | `/find-contradictions` | Pyrrhonian skepticism | Place a claim beside serious counterclaims to see the limits of its confidence. Proposes `contradicts [[wikilink]]` annotations. Writes on approval only. |
 | `/moc` | | Create or update a MOC. Groupings are proposals; you curate. |
 | `/maintain` | | Vault-wide health pass. Aggregates all skills. Chat output only; nothing written without approval. |
+
+External skills — install separately at `~/.claude/skills/`:
+
+| Skill | What it does |
+|---|---|
+| `/stop-slop` | Mechanical writing quality checks: em dashes, banned filler, passive constructions. Called before any prose is written to disk. |
+| `/writing-voice` | Voice calibration for prose output. Calls `/stop-slop` internally. Primary pre-write call for all prose-writing skills. |
+| `/book-notes` | Chapter-level book extraction. Output lands in `book-notes/` with `type: book-note` and `derived-from:` pointing at the source note. |
 
