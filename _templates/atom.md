@@ -3,7 +3,10 @@ type: atom
 derived-from: "[[sources/source-slug]]"
 tags: [topic1, topic2]
 ---
-# [Claim as an assertion, not a topic noun]
+# [Claim-shaped title]
 
-[50-250 words. One concept. Rule of thumb: this concept would have a Wikipedia page.
-Body wikilinks for connections and contradictions.]
+[One paragraph: claim → mechanism/evidence → implication.]
+
+## Links
+- Related: [[...]] because [...]
+- Contrasts: [[...]] because [...]
