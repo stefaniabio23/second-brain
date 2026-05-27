@@ -4,7 +4,7 @@ tags: [biology, biotech, infectious-disease]
 derived-from: "[[sources/molecular-disease-foundations]]"
 ---
 
-# Hepatitis C has no vaccine because its RNA-dependent RNA polymerase cannot proofread, generating a cloud of quasi-species variants that outpace immune recognition
+# HCV vaccine design is constrained by polymerase infidelity and quasi-species diversity
 
 The HCV replication complex uses an RNA-dependent RNA polymerase (RdRP) to copy its genome. Unlike DNA polymerases, RdRP lacks 3' to 5' exonuclease proofreading activity. Errors made during replication are not corrected.
 
