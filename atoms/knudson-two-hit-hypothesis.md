@@ -4,7 +4,7 @@ tags: [biotech, biology, cancer-research]
 derived-from: "[[sources/cancer-biology-foundations]]"
 ---
 
-# Both alleles of a tumor suppressor gene must be inactivated for loss of tumor suppression
+# Cancer requires sequential accumulation of driver mutations, not a single event
 
 Knudson proposed this from studying retinoblastoma: children with familial retinoblastoma inherit one mutated RB1 allele in every cell, so a single second somatic hit in any retinal cell produces a tumor. Children with sporadic retinoblastoma need two independent somatic hits in the same cell, which is far less probable, explaining why sporadic cases typically present with one tumor in one eye while familial cases present with multiple tumors in both eyes.
 
